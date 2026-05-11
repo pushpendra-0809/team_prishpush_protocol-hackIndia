@@ -1,0 +1,125 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+const resources = {
+  en: {
+    translation: {
+      "app_name": "YojanaAI",
+      "login": "Login",
+      "register": "Register",
+      "username": "Username",
+      "password": "Password",
+      "mobile": "Mobile Number",
+      "aadhaar": "Aadhaar Number",
+      "identifier": "Username/Mobile/Aadhaar",
+      "full_name": "Full Name",
+      "phone": "Phone Number",
+      "category": "Category",
+      "state": "State",
+      "district": "District",
+      "gender": "Gender",
+      "occupation": "Occupation",
+      "annual_income": "Annual Income",
+      "age": "Age",
+      "send_otp": "Send OTP",
+      "verify_otp": "Verify OTP",
+      "resend_otp": "Resend OTP",
+      "welcome": "Welcome",
+      "dashboard": "Dashboard",
+      "records": "Application Records",
+      "profile": "User Profile",
+      "logout": "Logout",
+      "total_apps": "Total Applications",
+      "completed": "Completed",
+      "pending": "Pending",
+      "in_progress": "In Progress",
+      "under_review": "Under Review",
+      "tracker": "Live Application Tracker",
+      "benefits": "Benefits Received",
+      "edit_profile": "Edit Profile",
+      "save_changes": "Save Changes",
+      "home": "Home",
+      "theme_toggle": "Toggle Theme",
+      "lang_switch": "Language",
+      "all": "All",
+      "submitted": "Submitted",
+      "eligibility": "Eligibility Check",
+      "docs_review": "Document Review",
+      "processing": "Processing",
+      "approved": "Approved",
+      "app_id": "Application ID",
+      "ref_num": "Reference Number",
+      "applied_date": "Applied Date",
+      "status": "Status",
+      "completion": "Completion",
+      "benefit_details": "Benefit Details"
+    }
+  },
+  hi: {
+    translation: {
+      "app_name": "योजनाAI",
+      "login": "लॉगिन",
+      "register": "पंजीकरण",
+      "username": "उपयोगकर्ता नाम",
+      "password": "पासवर्ड",
+      "mobile": "मोबाइल नंबर",
+      "aadhaar": "आधार नंबर",
+      "identifier": "उपयोगकर्ता नाम/मोबाइल/आधार",
+      "full_name": "पूरा नाम",
+      "phone": "फ़ोन नंबर",
+      "category": "श्रेणी",
+      "state": "राज्य",
+      "district": "ज़िला",
+      "gender": "लिंग",
+      "occupation": "व्यवसाय",
+      "annual_income": "वार्षिक आय",
+      "age": "आयु",
+      "send_otp": "ओटीपी भेजें",
+      "verify_otp": "ओटीपी सत्यापित करें",
+      "resend_otp": "ओटीपी पुनः भेजें",
+      "welcome": "स्वागत है",
+      "dashboard": "डैशबोर्ड",
+      "records": "आवेदन रिकॉर्ड",
+      "profile": "उपयोगकर्ता प्रोफ़ाइल",
+      "logout": "लॉगआउट",
+      "total_apps": "कुल आवेदन",
+      "completed": "पूर्ण",
+      "pending": "लंबित",
+      "in_progress": "प्रगति में",
+      "under_review": "समीक्षाधीन",
+      "tracker": "लाइव आवेदन ट्रैकर",
+      "benefits": "प्राप्त लाभ",
+      "edit_profile": "प्रोफ़ाइल संपादित करें",
+      "save_changes": "परिवर्तनों को सहेजें",
+      "home": "होम",
+      "theme_toggle": "थीम बदलें",
+      "lang_switch": "भाषा",
+      "all": "सभी",
+      "submitted": "जमा किया गया",
+      "eligibility": "पात्रता जांच",
+      "docs_review": "दस्तावेज़ समीक्षा",
+      "processing": "प्रसंस्करण",
+      "approved": "अनुमोदित",
+      "app_id": "आवेदन आईडी",
+      "ref_num": "संदर्भ संख्या",
+      "applied_date": "आवेदन की तारीख",
+      "status": "स्थिति",
+      "completion": "पूर्णता",
+      "benefit_details": "लाभ विवरण"
+    }
+  }
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+export default i18n;
